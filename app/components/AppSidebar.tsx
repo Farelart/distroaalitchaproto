@@ -3,9 +3,9 @@
 import { useState } from "react";
 
 const links = [
-  ["ai", "✦", "AI consultant", "/ai-consultant"],
   ["overview", "◈", "Overview", "/"],
   ["discover", "⌁", "Discover", "/discover"],
+  ["ai", "✦", "AI consultant", "/ai-consultant"],
   ["campaigns", "◫", "Campaigns", "/campaigns"],
   ["content", "♧", "Content studio", "/content-studio"],
   ["analytics", "⌇", "Analytics", "/analytics"],
