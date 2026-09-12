@@ -3,6 +3,7 @@ import "./globals.css";
 import "./polish.css";
 import "./product-pages.css";
 import "./nav-order.css";
+import "./sidebar-control.css";
 import LegacyNavigation from "./components/LegacyNavigation";
 
 export const metadata: Metadata = {

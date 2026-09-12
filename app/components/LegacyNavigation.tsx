@@ -12,6 +12,17 @@ const routes: Record<string,string> = {
 export default function LegacyNavigation(){
   useEffect(()=>{
     const cleanups: Array<()=>void> = [];
+    const sidebar = document.querySelector<HTMLElement>(".sidebar");
+    if (sidebar) {
+      sidebar.classList.add("slick-sidebar");
+      let toggle = sidebar.querySelector<HTMLButtonElement>(".sidebar-toggle");
+      let injectedToggle = false;
+      if (!toggle) {
+        injectedToggle = true; toggle = document.createElement("button"); toggle.className = "sidebar-toggle legacy-toggle"; toggle.setAttribute("aria-label", "Collapse navigation"); toggle.innerHTML = '<span class="panel-icon"></span>'; sidebar.appendChild(toggle);
+      }
+      const handleToggle = () => { const collapsed = sidebar.classList.toggle("collapsed"); toggle?.setAttribute("aria-label", collapsed ? "Open navigation" : "Collapse navigation"); };
+      if (injectedToggle) { toggle.addEventListener("click", handleToggle); cleanups.push(() => toggle?.removeEventListener("click", handleToggle)); }
+    }
     document.querySelectorAll<HTMLElement>(".nav-item").forEach(item=>{
       const label = Object.keys(routes).find(key=>item.textContent?.includes(key));
       if(!label || item.getAttribute("href")) return;

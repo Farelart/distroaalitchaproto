@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <main className="app-shell">
       <aside className={`sidebar slick-sidebar ${collapsed ? "collapsed" : ""}`}>
-        <div className="side-top"><div className="brand"><span className="brand-mark">d</span><span className="side-copy">distroa</span></div><button className="sidebar-toggle" onClick={() => setCollapsed(!collapsed)} aria-label={collapsed ? "Open navigation" : "Collapse navigation"}>{collapsed ? "→" : "←"}</button></div>
+        <div className="side-top"><div className="brand"><span className="brand-mark">d</span><span className="side-copy">distroa</span></div><button className="sidebar-toggle" onClick={() => setCollapsed(!collapsed)} aria-label={collapsed ? "Open navigation" : "Collapse navigation"}><span className="panel-icon"/></button></div>
         <div className="workspace-switch"><span className="workspace-dot">A</span><span className="side-copy">Arden Labs</span><span className="chevron side-copy">⌄</span></div>
         <nav>
           <p className="nav-label side-copy">Workspace</p>
