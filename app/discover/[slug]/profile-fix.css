@@ -1,0 +1,3 @@
+/* Keep the profile identity compact: the portrait is an avatar, not a feature hero. */
+.creator-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;min-height:112px}.hero-person{min-width:0}.portrait-wrap{width:78px;height:78px;flex:0 0 78px}.portrait-wrap img{width:78px;height:78px;display:block;object-fit:cover;border-radius:12px;box-shadow:0 9px 21px rgba(52,70,60,.13)}.hero-actions{justify-self:end;white-space:nowrap}.hero-person>img{display:none}
+@media(max-width:720px){.creator-hero{display:block}.hero-actions{margin-top:16px;justify-self:auto}}
