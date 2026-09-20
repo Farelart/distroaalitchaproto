@@ -2,8 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://distroaalitchaproto-gamma.vercel.app"),
   title: "Sillage — Find your people. Leave an impression.",
-  description: "Find creators who understand your brand. Explore a more human way to build meaningful creator partnerships with Sillage."
+  description: "Find creators who understand your brand. Explore a more human way to build meaningful creator partnerships with Sillage.",
+  openGraph: {
+    title: "Sillage — Find your people. Leave an impression.",
+    description: "Find creators who understand your brand.",
+    siteName: "Sillage",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sillage — Find your people. Leave an impression.",
+    description: "Find creators who understand your brand."
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
