@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "./polish.css";
-import "./product-pages.css";
-import "./nav-order.css";
-import "./sidebar-control.css";
-import LegacyNavigation from "./components/LegacyNavigation";
 
 export const metadata: Metadata = {
-  title: "Distroa — Distribution intelligence",
-  description: "A distribution operating system prototype"
+  title: "Sillage — Find your people. Leave an impression.",
+  description: "Find creators who understand your brand. Explore a more human way to build meaningful creator partnerships with Sillage."
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><LegacyNavigation />{children}</body></html>;
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
